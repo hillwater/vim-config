@@ -118,7 +118,12 @@ let Tlist_Inc_Winwidth=0
 "对NERD_commenter的设置
 let NERDShutUp=1
 
-
+""""""""""""""""""""""""""""""
+" winManager setting
+""""""""""""""""""""""""""""""
+let g:winManagerWindowLayout = "BufExplorer|FileExplorer"
+let g:winManagerWidth = 30
+let g:defaultExplorer = 0
 map <c-w><c-f> :FirstExplorerWindow<cr>
 map <c-w><c-b> :BottomExplorerWindow<cr>
 map <c-w><c-t> :WMToggle<cr>

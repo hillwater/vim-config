@@ -121,9 +121,27 @@ let NERDShutUp=1
 """"""""""""""""""""""""""""""
 " winManager setting
 """"""""""""""""""""""""""""""
-let g:winManagerWindowLayout = "BufExplorer|FileExplorer"
-let g:winManagerWidth = 30
-let g:defaultExplorer = 0
-map <c-w><c-f> :FirstExplorerWindow<cr>
-map <c-w><c-b> :BottomExplorerWindow<cr>
-map <c-w><c-t> :WMToggle<cr>
+"let g:winManagerWindowLayout = "BufExplorer|FileExplorer"
+"let g:winManagerWidth = 30
+"let g:defaultExplorer = 0
+"map <c-w><c-f> :FirstExplorerWindow<cr>
+"map <c-w><c-b> :BottomExplorerWindow<cr>
+"map <c-w><c-t> :WMToggle<cr>
+
+
+let g:NERDTree_title='NERD Tree'
+
+let g:winManagerWindowLayout='NERDTree'
+
+function! NERDTree_Start()
+    exec 'NERDTree'
+endfunction
+
+function! NERDTree_IsValid()
+    return 1
+endfunction
+
+" 用 F4 打开
+nmap <F4> :WMToggle<cr>:q<cr>
+" 用 ctrl + F4 关闭
+nmap <C-F4> :WMToggle<cr>
